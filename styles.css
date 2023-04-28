@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #256fff;
+  --dark-primary-color: #1e4fff;
+  --primary-font-color: #111111;
+  --secondary-font-color: #949494;
+  --input-background: #f4f6fa;
+  --page-background: #ededed;
+  --page-secondary-background: #292b36;
+}
+
+html {
+  font-size: 6px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--primary-font-color);
+  background-color: var(--page-background);
+}
+
+/* Global */
+
+section {
+  width: 60%;
+  margin: 0 auto;
+  padding: 64px 0;
+}
+
+/* Fonts */
+
+h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+h4 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-font-color);
+}
+
+/* Buttons */
+
+button {
+  border: none;
+  font-size: 2.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.2rem 2.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-primary-color);
+}
+
+/* Tables */
+
+.table table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table table .table-header {
+  background-color: var(--input-background);
+  margin-bottom: 32px;
+}
+
+.table table .table-header th {
+  font-size: 2.5rem;
+  font-weight: 400;
+  padding: 1.5rem 2rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table table td {
+  font-size: 2.5rem;
+  font-weight: 300;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Navigation */
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+  text-transform: uppercase;
+  padding: 8rem 0;
+}
+
+.nav-logo {
+  margin-top: 10px;
+}
+
+.nav-links ul,
+.nav-auth ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
+}
+
+.nav-links li,
+.nav-auth li {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+/* Search Bar */
+
+.search-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 4rem;
+  border-radius: 8px;
+}
+
+.search-box form {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.input-box,
+.submit-box {
+  display: flex;
+}
+
+.input-box {
+  flex: 5;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.input-box label {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--secondary-font-color);
+}
+
+.input-box input,
+.input-box select {
+  background-color: var(--input-background);
+  border: none;
+  padding: 1.2rem 2.5rem;
+  font-size: 2.5rem;
+  border-radius: 8px;
+  color: var(--secondary-font-color);
+  outline: none;
+}
+
+.input-box input::placeholder {
+  color: var(--secondary-font-color);
+}
+
+.submit-box {
+  flex: 1;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.submit-box button {
+  padding: 1.2rem 2rem;
+  font-size: 2.5rem;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.submit-box button:hover {
+  background-color: var(--dark-primary-color);
+}
+
+.search-message {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--secondary-font-color);
+  margin-top: 16px;
+}
+
+/* Product List */
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  grid-row-gap: 20px; /* add row gap */
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.product-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: var(--page-background);
+}
+
+.product img {
+  width: 100%;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4px;
+  padding: 16px 0 0 0;
+}
+
+.product-info h4 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--secondary-font-color);
+}
+
+.product-price {
+  font-size: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-price .price-type {
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--secondary-font-color);
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--page-secondary-background);
+  padding: 64px 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  font-size: 2.3rem;
+}
+
+.footer-top,
+.footer-bottom {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.footer-top,
+.footer-bottom,
+.footer-links,
+.footer-links--nav,
+.footer-links--nav ul,
+.footer-links--social ul,
+.footer-legal ul {
+  list-style: none;
+  display: flex;
+}
+
+.footer-logo {
+  flex: 5;
+}
+
+.footer-links {
+  flex: 6;
+  justify-content: flex-end;
+  gap: 128px;
+}
+
+.footer-links--nav {
+  justify-content: space-between;
+  gap: 128px;
+}
+
+.footer-links--nav ul {
+  flex-direction: column;
+  gap: 32px;
+}
+
+.footer-links--social ul {
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.footer-bottom {
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 1px solid var(--page-background);
+  padding-top: 16px;
+}
+
+.footer-legal ul {
+  gap: 32px;
+}
+
+footer li,
+footer p {
+  font-weight: 300;
+  cursor: pointer;
+}
+
+/* Login */
+
+.login-nav {
+  position: fixed;
+  width: 60%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.login {
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  width: 500px;
+  height: fit-content;
+  background-color: white;
+  border-radius: 8px;
+  padding: 32px;
+}
+
+.login-box--inputs {
+  margin: 32px 0;
+  padding: 32px 0 0 0;
+  border-top: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.login-box--inputs input {
+  height: 48px;
+}
+
+.login-box h2 {
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.login-box p {
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--secondary-font-color);
+  margin-top: 8px;
+}
+
+.login-box .error {
+  color: red;
+  font-size: 1.6rem;
+}
+
+/* Cart Page */
+
+.main {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.main-panel {
+  flex: 6;
+}
+
+.side-panel {
+  flex: 4;
+}
+
+/* Cart Billing */
+
+.cart-information {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+.cart-row {
+  display: flex;
+}
+
+.row-1,
+.row-2,
+.row-3 {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 16px;
+}
+
+.inner-row-1 {
+  flex: 2;
+}
+
+.inner-row-2,
+.inner-row-3 {
+  flex: 1;
+}
+
+/* Past Rentals */
+
+
+
+/* Order Summary */
+
+.order-summary {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+/* Management */
+
+.top-states,
+.orders-list {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+.top-states .states {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.top-states .states .state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--primary-color);
+  padding: 16px;
+  border-radius: 8px;
+  color: #fff;
+  flex: 1;
+}
+
+.state h3 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.state p {
+  font-size: 2rem;
+  font-weight: 300;
+  width: fit-content;
+}
+
+.state .rental_amount {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.state-inputs .input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  margin: 16px 0;
+}
+
+.past-rentals .table,
+.clock-info .clock-card,
+.customers-order-details .order-box {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+.order-box form,
+.block-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+}
